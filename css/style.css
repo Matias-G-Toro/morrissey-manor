@@ -301,3 +301,65 @@ footer .btn:hover {
     background-color: #C5A059;
     border-color: #C5A059;
 }
+
+/* Mobile Overrides */
+@media screen and (max-width: 768px) {
+    /* 1. Global Grids: Fall back to N-1 columns */
+    .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* 2. Custom Welcome Section Grid (3 columns -> 2 columns) */
+    #rector-welcome .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Make the middle text span across or stack cleanly if needed */
+    #rector-welcome .grid p {
+        grid-column: span 2;
+    }
+
+    /* 3. Gallery Grids: Keep flush height behavior, scale down slightly for mobile screens */
+    #gallery .grid img {
+        height: 180px; /* Scales down from 250px so they fit nicely side-by-side */
+    }
+
+    /* 4. Navigation Links: Make touch targets wrap and space nicely */
+    .site-nav ul {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .site-nav a {
+        font-size: 0.95rem;
+        padding: 0.3rem 0.5rem;
+    }
+}
+
+/* Extra small devices (Phones under 480px): Drop 3-col down to 1-col for readability */
+@media screen and (max-width: 480px) {
+    .grid-4,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    #rector-welcome .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #rector-welcome .grid p {
+        grid-column: span 1;
+    }
+
+    #gallery .grid img {
+        height: 220px; /* Give single/double wrapped images a bit more presence on tiny screens */
+    }
+}
