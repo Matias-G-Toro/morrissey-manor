@@ -1,12 +1,19 @@
-media: images
+# Media configuration for your images folder
+media:
+  name: images
+  label: Images
+  input: images
+  output: /images
+  extensions: [png, jpg, jpeg, webp, svg]
+
+# Content configuration for managing your index.html page
 content:
-  - name: sections
-    label: Site Sections
-    path: content
+  - name: homepage
+    label: Home Page
+    type: file
+    path: index.html
+    format: raw
     fields:
-      - name: title
-        label: Section Title
-        type: string
       - name: body
-        label: Content
-        type: markdown
+        label: HTML Content
+        type: rich-text
