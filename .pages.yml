@@ -1,11 +1,13 @@
 media: media
 content:
-  - name: pages
-    label: Pages
+  - name: html-pages
+    label: HTML Pages
     type: collection
     path: docs
     fields:
       - name: title
         type: string
-      - name: body
-        type: rich-text
+      - name: source_code
+        type: code
+        options:
+          format: html
