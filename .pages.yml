@@ -1,0 +1,11 @@
+media: images
+content:
+  - name: pages
+    label: Site Content
+    files:
+      - path: index.html
+        label: Home Page Content
+        fields:
+          - name: title
+            label: Page Title
+            type: string
