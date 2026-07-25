@@ -10,8 +10,3 @@ content:
     label: Home Page
     type: file
     path: index.html
-    format: raw
-    fields:
-      - name: body
-        label: Raw HTML Content
-        type: text
