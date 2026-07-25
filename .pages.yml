@@ -1,12 +1,11 @@
-media:
-  name: images
-  label: Images
-  input: images
-  output: /images
-  extensions: [png, jpg, jpeg, webp, svg]
-
+media: media
 content:
-  - name: homepage
-    label: Home Page
-    type: file
-    path: index.html
+  - name: pages
+    label: Pages
+    type: collection
+    path: docs
+    fields:
+      - name: title
+        type: string
+      - name: body
+        type: rich-text
