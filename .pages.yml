@@ -13,6 +13,5 @@ content:
     format: raw
     fields:
       - name: body
-        label: HTML Source Code
-        type: code
-        syntax: html
+        label: Raw HTML Content
+        type: text
